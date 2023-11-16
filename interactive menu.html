@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Restaurant Menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#gyudon").hover(function(){
+                $("#gyu").slideToggle(500);
+            });
+            $("#tendon").hover(function(){
+                $("#ten").slideToggle(500);
+            });
+            $("#katsudon").hover(function(){
+                $("#katsu").slideToggle(500);
+            });
+            $("#ocha").hover(function(){
+                $("#oc").slideToggle(500);
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            background-color: #87CEEB;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        p:hover {
+            background-color: #5DADE2;
+        }
+
+        div {
+            display: none;
+            padding: 15px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu</h1>
+
+    <section>
+        <h2>Main Menu</h2>
+        <p id="gyudon">Gyudon - Rp.50.000 (hover to see description and image)</p>
+        <div id="gyu">
+            <img src="gyudon.jpg" alt="Gyudon">
+            <h2>Description</h2>
+            Japanese dish consisting of simmered beef and onion served over a bowl of rice.
+        </div>
+
+        <p id="tendon">Tendon - Rp.40.000 (hover to see description and image)</p>
+        <div id="ten">
+            <img src="tendon.jpg" alt="Tendon">
+            <h2>Description</h2>
+            Japanese dish consisting of various fried tempura served over a bowl of rice.
+        </div>
+
+        <p id="katsudon">Katsudon - Rp.43.000 (hover to see description and image)</p>
+        <div id="katsu">
+            <img src="katsudon.jpg" alt="Katsudon">
+            <h2>Description</h2>
+            Japanese dish consisting of breaded deep-fried chicken cutlet served over a bowl of rice.
+        </div>
+    </section>
+
+    <section>
+        <h2>Beverages</h2>
+        <p id="ocha">Ocha - Rp.8.000 (hover to see description and image)</p>
+        <div id="oc">
+            <img src="ocha.jpg" alt="Ocha">
+            <h2>Description</h2>
+            Japanese green tea served either hot or cold.
+        </div>
+    </section>
+</body>
+</html>

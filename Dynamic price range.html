@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Delivery Service</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 8px;
+            margin-left: 10px;
+        }
+
+        #total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#Quantity, #Weight, #Distance").keyup(function(){
+                var Q = $("#Quantity").val();
+                var W = 7500 * $("#Weight").val();
+                var D = 5000 * $("#Distance").val();
+                if (!isNaN(Q) && !isNaN(W) && !isNaN(D)) {
+                    var total = Q * (W + D);
+                    $("#total").text("Total: Rp " + total);
+                } else {
+                    $("#total").text("Please fill the input with valid numbers.");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Online Delivery Service</h1>
+    <p>Weight (kg): <input type="text" id="Weight"></p>
+    <p>Distance (km): <input type="text" id="Distance"></p>
+    <p>Quantity: <input type="text" id="Quantity"></p>
+    <p id="total">Total:</p>
+</body>
+</html>
